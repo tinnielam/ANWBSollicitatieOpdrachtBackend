@@ -1,8 +1,7 @@
 const mongoose = require('mongoose');
 const verkeerInformatieSchema = mongoose.Schema({
-    copyright: { type: String },
-    dateTime: {type: Date},
-    roads: {type: Array}
+    roads: {type: Array},
+    totals: {type: Object}
 })
 
 module.exports = mongoose.model('VerkeersInformatie', verkeerInformatieSchema);
