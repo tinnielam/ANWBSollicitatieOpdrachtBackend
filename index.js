@@ -2,7 +2,7 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const fetchData = require('./fetchAnwbData');
+const fetchData = require('./anwbData');
 const mongo = require('./mongoServer');
 
 //Model ophalen

@@ -4,6 +4,10 @@ const Verkeersinformatie = require('../model/verkeersInformatie');
 
 router.get("/", (req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
+  getAllVerkeersInformatie(res);
+});
+
+function getAllVerkeersInformatie(res) {
   Verkeersinformatie.find({}, function(err, result) {
     if (err) {
       res.send(err);
@@ -12,6 +16,6 @@ router.get("/", (req, res, next) => {
       res.send(result);
     }
   });
-});
+}
 
 module.exports = router;

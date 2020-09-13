@@ -14,4 +14,4 @@ mongoose.connect(mongooseUri, dbOptions, (error) => {
   }
 });
 
-exports.serverUri = mongooseUri
+exports.serverUri = mongooseUri;
