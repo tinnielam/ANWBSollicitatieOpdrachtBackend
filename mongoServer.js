@@ -2,11 +2,11 @@
 const mongoose = require('mongoose');
 const uriUtil = require('mongodb-uri');
 const mongodbUri = 'mongodb+srv://tinnielam:Dranzer15#$@anwbsollicitatieopdrach.njwpf.azure.mongodb.net/ANWB?retryWrites=true&w=majority';
-const mongooseUri = uriUtil.formatMongoose(mongodbUri);
+const mongooseUriFormat = uriUtil.formatMongoose(mongodbUri);
 const dbOptions = { useUnifiedTopology: true, useNewUrlParser: true };
 
 //verbinding maken met MongoDB
-mongoose.connect(mongooseUri, dbOptions, (error) => {
+mongoose.connect(mongooseUriFormat, dbOptions, (error) => {
   if (error) {
     console.log(error);
   } else {
@@ -14,4 +14,4 @@ mongoose.connect(mongooseUri, dbOptions, (error) => {
   }
 });
 
-exports.serverUri = mongooseUri;
+exports.serverUri = mongooseUriFormat;
