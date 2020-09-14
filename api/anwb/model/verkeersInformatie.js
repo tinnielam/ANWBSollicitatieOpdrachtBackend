@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 const verkeerInformatieSchema = mongoose.Schema({
-  segments: [{ __V: {},
+  segments: [{
+    start: { type: String },
+    end: { type: String },
     jams: [{
       id: { type: Number, unique: true, sparse: true },
       road: { type: String },
@@ -16,7 +18,9 @@ const verkeerInformatieSchema = mongoose.Schema({
       events: { type: Array },
       start: { type: Date },
       stop: { type: Date },
-      reason: { type: String }
+      reason: { type: String },
+      distance: { type: Number },
+      delay: { type: Number }
     }],
     roadworks: [{
       id: { type: Number, unique: true, sparse: true },
@@ -32,8 +36,8 @@ const verkeerInformatieSchema = mongoose.Schema({
       events: { type: Array },
       start: { type: Date },
       stop: { type: Date },
-      reason: { type: String }
-    }]    
+      reason: { type: String },
+    }]   
   }]
 }, function(err, r) {
   if (err) {
