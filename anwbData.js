@@ -4,7 +4,7 @@ const fetch = require('node-fetch');
 const nodeAgenda = require('agenda');
 const mongo = require('./mongoServer');
 const anwbApi = "https://api.anwb.nl/v1/incidents?apikey=QYUEE3fEcFD7SGMJ6E7QBCMzdQGqRkAi&polylines=true&polylineBounds=true&totals=true";
-const Verkeersinformatie = require('./api/anwb/model/verkeersInformatie');
+const Verkeersinformatie = require('./api/anwb/model/verkeersinformatie');
 
 // nieuw Agenda object maken om light jobs uit te voeren.
 const agenda = new nodeAgenda({ db: { address: mongo.serverUri }, processEvery: '5 seconds' });
@@ -19,7 +19,7 @@ agenda.define('Sync ANWB feed every 5 minutes', async job => {
 // Magie om de light jobs uit te voeren.
 (async function() {
   await agenda.start();
-  await agenda.every('one minute', 'Sync ANWB feed every 5 minutes');
+  await agenda.every('5 minutes', 'Sync ANWB feed every 5 minutes');
 })();
 
 function insertDataToMongoCollection() {

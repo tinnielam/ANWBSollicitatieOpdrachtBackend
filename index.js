@@ -6,9 +6,9 @@ const fetchData = require('./anwbData');
 const mongo = require('./mongoServer');
 
 //Model ophalen
-const verkeersInformatieRoutes = require('./api/anwb/routes/verkeersInformatie');
+const verkeersinformatieRoutes = require('./api/anwb/routes/verkeersinformatie');
 
-app.use('/verkeersInformatie', verkeersInformatieRoutes)
+app.use('/verkeersinformatie', verkeersinformatieRoutes)
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 

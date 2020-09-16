@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const verkeerInformatieSchema = mongoose.Schema({
+const verkeerinformatieSchema = mongoose.Schema({
   segments: [{
     start: { type: String },
     end: { type: String },
@@ -55,4 +55,4 @@ const verkeerInformatieSchema = mongoose.Schema({
   }]
 });
 
-module.exports = mongoose.model('VerkeersInformatie', verkeerInformatieSchema);
+module.exports = mongoose.model('Verkeersinformatie', verkeerinformatieSchema);

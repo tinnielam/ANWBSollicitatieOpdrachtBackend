@@ -1,13 +1,13 @@
 const express = require('express');
 const router = express.Router();
-const Verkeersinformatie = require('../model/verkeersInformatie');
+const Verkeersinformatie = require('../model/verkeersinformatie');
 
 router.get("/", (req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
-  getAllVerkeersInformatie(res);
+  getAllVerkeersinformatie(res);
 });
 
-function getAllVerkeersInformatie(res) {
+function getAllVerkeersinformatie(res) {
   Verkeersinformatie.find({}, function(err, result) {
     if (err) {
       res.send(err);
