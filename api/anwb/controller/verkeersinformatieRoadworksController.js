@@ -17,6 +17,7 @@ module.exports = function updateAndInsertAnwbJsonDataRoadworks() {
                     roadworks: {
                       id: roadworks.id,
                       road: roadworks.road,
+                      type: roadworks.type,
                       category: roadworks.category,
                       label: roadworks.label,
                       incidentType: roadworks.incidentType,

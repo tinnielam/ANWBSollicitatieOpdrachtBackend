@@ -6,6 +6,7 @@ const verkeerinformatieSchemaRadars = mongoose.Schema({
     radars: [{
       id: { type: Number, sparse: true },
       road: { type: String },
+      type: { type: String },
       category: { type: String },
       label: { type: String },
       incidentType: { type: String },

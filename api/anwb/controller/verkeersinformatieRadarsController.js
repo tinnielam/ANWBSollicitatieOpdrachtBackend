@@ -19,6 +19,7 @@ module.exports = function updateAndInsertAnwbJsonDataRadars() {
                     radars: {
                       id: radars.id,
                       road: radars.road,
+                      type: radars.type,
                       category: radars.category,
                       label: radars.label,
                       incidentType: radars.incidentType,

@@ -6,6 +6,7 @@ const verkeerinformatieSchemaRoadworks = mongoose.Schema({
     roadworks: [{
       id: { type: Number, sparse: true },
       road: { type: String },
+      type: { type: String },
       category: { type: String },
       label: { type: String },
       incidentType: { type: String },

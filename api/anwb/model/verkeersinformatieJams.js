@@ -6,6 +6,7 @@ const verkeerinformatieSchemaJams = mongoose.Schema({
     jams: [{
       id: { type: Number},
       road: { type: String },
+      type: { type: String },
       category: { type: String },
       label: { type: String },
       incidentType: { type: String },
