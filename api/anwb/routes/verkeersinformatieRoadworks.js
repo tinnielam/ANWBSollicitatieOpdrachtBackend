@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Verkeersinformatie = require('../model/verkeersinformatie');
+const VerkeersinformatieRoadworks = require('../model/verkeersinformatieRoadworks');
 
 router.get("/", (req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
@@ -8,11 +8,11 @@ router.get("/", (req, res, next) => {
 });
 
 function getAllVerkeersinformatie(res) {
-  Verkeersinformatie.find({}, function(err, result) {
+  VerkeersinformatieRoadworks.find({}, function(err, result) {
     if (err) {
       res.send(err);
     } else {
-      console.log("Verkeersinformatie succesvol opgehaald");
+      console.log("VerkeersinformatieRoadworks succesvol opgehaald");
       res.send(result);
     }
   });
