@@ -21,6 +21,6 @@ agenda.define('Sync ANWB feed every 5 minutes', async job => {
 
 (async function() {
   await agenda.start();
-  await agenda.every('one minute', 'Sync ANWB feed every 5 minutes');
+  await agenda.every('5 minutes', 'Sync ANWB feed every 5 minutes');
 })();
 

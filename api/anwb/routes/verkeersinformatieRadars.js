@@ -15,7 +15,7 @@ function getAllVerkeersinformatie(res) {
       console.log("VerkeersinformatieRadars succesvol opgehaald");
       res.send(result);
     }
-  });
+  }).sort({'date': -1}).limit(5);
 }
 
 module.exports = router;
