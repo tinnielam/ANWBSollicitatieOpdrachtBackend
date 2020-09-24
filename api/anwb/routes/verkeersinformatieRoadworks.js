@@ -15,7 +15,7 @@ function getAllVerkeersinformatie(res) {
       console.log("VerkeersinformatieRoadworks succesvol opgehaald");
       res.send(result);
     }
-  }).sort({'date': -1}).limit(5);
+  }).sort({ _id: -1 }).limit(5)
 }
 
 module.exports = router;
