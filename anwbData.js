@@ -1,4 +1,3 @@
-// fetch dependency en data initialiseren
 const fetch = require('node-fetch');
 const nodeAgenda = require('agenda');
 const mongo = require('./mongoServer');
