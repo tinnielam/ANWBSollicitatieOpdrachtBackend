@@ -1,7 +1,7 @@
 const VerkeersinformatieRoadworks = require("../model/verkeersinformatieRoadworks");
 
 module.exports = function updateAndInsertAnwbJsonDataRoadworks() {
-   anwbJsonData.roads.map(roads =>
+  anwbJsonData.roads.map(roads =>
     roads.segments
       .filter(segments => typeof segments.roadworks !== "undefined")
       .map(segments =>
@@ -14,6 +14,8 @@ module.exports = function updateAndInsertAnwbJsonDataRoadworks() {
               update: {
                 $set: {
                   segments: {
+                    start: segments.start,
+                    end: segments.end,
                     roadworks: {
                       id: roadworks.id,
                       road: roadworks.road,

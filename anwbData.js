@@ -15,8 +15,8 @@ agenda.define('Sync ANWB feed every 5 minutes', async job => {
     .then(res => res.json())
     .then(data => (anwbJsonData = data))
     .then(() => VerkeersinformatieJamsController())
-    .then(()=> VerkeersinformatieRoadworksController())
-    .then(()=> VerkeersinformatieRadarsController())
+    .then(() => VerkeersinformatieRoadworksController())
+    .then(() => VerkeersinformatieRadarsController())
 });
 
 (async function() {
