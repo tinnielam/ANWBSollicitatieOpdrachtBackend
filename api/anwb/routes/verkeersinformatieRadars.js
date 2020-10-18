@@ -6,10 +6,10 @@ const anwbApi = "https://api.anwb.nl/v1/incidents?apikey=QYUEE3fEcFD7SGMJ6E7QBCM
 let anwbJsonData;
 
 router.get("/", (req, res, next) => {
-  getAllVerkeersinformatie(res);
+  getAllVerkeersinformatieRadars(res);
 });
 
-function getAllVerkeersinformatie(res) {
+function getAllVerkeersinformatieRadars(res) {
   VerkeersinformatieRadars.find({
     "segments.radars.id": { $in: anwbJsonData.flat().flat() }
   }, function(err, result) {
@@ -35,6 +35,6 @@ async function getActueleRadarsIdFromAnwbApi() {
         ))
     ))
 }
-  
+
 getActueleRadarsIdFromAnwbApi()
 module.exports = router;
