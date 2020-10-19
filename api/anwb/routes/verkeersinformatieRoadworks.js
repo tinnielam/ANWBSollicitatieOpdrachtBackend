@@ -6,6 +6,7 @@ const anwbApi = "https://api.anwb.nl/v1/incidents?apikey=QYUEE3fEcFD7SGMJ6E7QBCM
 let anwbJsonData;
 
 router.get("/", (req, res, next) => {
+  getActueleRoadworksIdFromAnwbApi()
   getAllVerkeersinformatieRoadworks(res);
 });
 

@@ -9,7 +9,7 @@ const VerkeersinformatieRoadworksController = require('./api/anwb/controller/ver
 const VerkeersinformatieRadarsController = require('./api/anwb/controller/verkeersinformatieRadarsController');
 
 const agenda = new nodeAgenda({ db: { address: mongo.serverUri }, processEvery: '5 seconds' });
-agenda.define('Sync ANWB feed every 5 minutes', async job => {
+agenda.define('Sync ANWB feed every minute', async job => {
   await fetch(anwbApi)
     .then(res => res.json())
     .then(data => (anwbJsonData = data))
@@ -20,6 +20,6 @@ agenda.define('Sync ANWB feed every 5 minutes', async job => {
 
 (async function() {
   await agenda.start();
-  await agenda.every('5 minutes', 'Sync ANWB feed every 5 minutes');
+  await agenda.every('one minute', 'Sync ANWB feed every minute');
 })();
 
