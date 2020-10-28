@@ -15,6 +15,7 @@ const verkeerinformatieSchemaRoadworks = mongoose.Schema({
       fromLoc: { type: Object },
       toLoc: { type: Object },
       bounds: { type: Object },
+      polyline: { type: String },
       events: { type: Array },
       start: { type: Date },
       stop: { type: Date },

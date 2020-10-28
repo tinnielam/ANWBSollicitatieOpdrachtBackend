@@ -19,6 +19,7 @@ function getAllVerkeersinformatieJams(res) {
     } else {
       console.log("VerkeersinformatieJams succesvol opgehaald");
       res.send(result);
+      console.log("Aantal files: " + result.length)
     }
   })
 }
@@ -37,5 +38,5 @@ async function getActueleJamsIdFromAnwbApi() {
     ))
 }
 
-getActueleJamsIdFromAnwbApi()
+getActueleJamsIdFromAnwbApi();
 module.exports = router;

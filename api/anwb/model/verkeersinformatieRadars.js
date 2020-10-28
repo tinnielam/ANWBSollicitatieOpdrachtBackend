@@ -14,6 +14,7 @@ const verkeerinformatieSchemaRadars = mongoose.Schema({
       to: { type: String },
       fromLoc: { type: Object },
       loc: {type: Object},
+      polyline: { type: String },
       toLoc: { type: Object },
       bounds: { type: Object },
       events: { type: Array },

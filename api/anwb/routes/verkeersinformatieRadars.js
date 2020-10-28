@@ -19,6 +19,7 @@ function getAllVerkeersinformatieRadars(res) {
     } else {
       console.log("VerkeersinformatieRadars succesvol opgehaald");
       res.send(result);
+            console.log("Aantal Camera's: " + result.length)
     }
   })
 }
@@ -37,5 +38,5 @@ async function getActueleRadarsIdFromAnwbApi() {
     ))
 }
 
-getActueleRadarsIdFromAnwbApi()
+getActueleRadarsIdFromAnwbApi();
 module.exports = router;

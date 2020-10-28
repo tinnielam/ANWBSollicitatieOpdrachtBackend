@@ -19,6 +19,7 @@ function getAllVerkeersinformatieRoadworks(res) {
     } else {
       console.log("VerkeersinformatieRoadworks succesvol opgehaald");
       res.send(result);
+      console.log("Aantal Wegwerkzaamheden: " + result.length)
     }
   })
 }
@@ -37,5 +38,5 @@ async function getActueleRoadworksIdFromAnwbApi() {
     ))
 }
 
-getActueleRoadworksIdFromAnwbApi()
+getActueleRoadworksIdFromAnwbApi();
 module.exports = router;
